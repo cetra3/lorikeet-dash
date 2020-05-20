@@ -7,9 +7,39 @@ A Web Dashboard for Lorikeet:
 
 Takes the [lorikeet](https://github.com/cetra3/lorikeet) tests and turns them into a web dashboard.
 
+## Installation
+
+You can install it via `cargo`:
+
+```
+cargo install lorikeet-dash
+```
+
 ## Usage
 
-You can use your existing [lorikeet](https://github.com/cetra3/lorikeet) `test.yml` file:
+You can use your existing [lorikeet](https://github.com/cetra3/lorikeet) `test.yml` file. If you don't have one, here's one to get you started:
+
+```yaml
+CPU Load:
+  system: load_avg15m
+
+Disk Free:
+  system: disk_free
+
+Memory Free:
+  system: mem_free
+
+Check Google:
+  http: https://www.google.com
+
+Check Reddit:
+  http: https://www.reddit.com
+
+Check Localhost:
+  http: http://localhost:3333/
+```
+
+Save this as `test.yml` run it like so:
 
 ```
 lorikeet-dash test.yml
@@ -38,13 +68,7 @@ ARGS:
     <test-plan>    Test Plan [default: test.yml]
 ```
 
-## Installation
 
-You can install it via `cargo`:
-
-```
-cargo install lorikeet-dash
-```
 
 ### Frontend Development
 
