@@ -3,6 +3,10 @@ name = "lorikeet-dash"
 version = "0.1.0"
 authors = ["cetra3 <cetra3@hotmail.com>"]
 edition = "2018"
+license = "MIT/Apache-2.0"
+description = "A Web Dashboard for Lorikeet"
+repository = "https://github.com/cetra3/lorikeet-dash"
+readme = "README.md"
 
 [dependencies]
 tokio = {version = "0.2", features = ["full"]}
