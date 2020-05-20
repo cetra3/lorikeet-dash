@@ -1,0 +1,19 @@
+$primary-color: #62a0ea;
+
+$success-color: #33d17a;
+$warning-color: #f6d32d;
+$error-color: #e01b24;
+
+$dark-color: #3d3846;
+
+$light-color: #fff;
+$gray-color: lighten($dark-color, 55%);
+$gray-color-dark: darken($gray-color, 30%);
+$gray-color-light: lighten($gray-color, 20%);
+
+$border-color: lighten($dark-color, 65%);
+$border-color-dark: darken($border-color, 10%);
+$border-color-light: lighten($border-color, 8%);
+$bg-color: darken($dark-color, 10%);
+$bg-color-dark: darken($bg-color, 3%);
+$bg-color-light: $light-color;

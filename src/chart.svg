@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="{{width + p_left + p_other}}" height="{{height + p_other * 2}}"  viewBox="0 0 {{width + p_left + p_other}} {{height + p_other * 2}}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  {% for i in range(end=(lines + 1)) %}
+  {% set offset_x = p_left + loop.index0/lines * width%}
+  {% set offset_y = p_other + loop.index0/lines * height%}
+  <text x="{{p_left - 5}}" font-family="-apple-system, system-ui, BlinkMacSystemFont, Roboto" y="{{offset_y}}" dominant-baseline="middle" text-anchor="end" font-size="12" fill="#74838f" font-weight="bold" >{{((lines - loop.index0)/lines * max_y) + min_y | pretty(format=units)}}</text>
+  <text x="{{offset_x}}" font-family="-apple-system, system-ui, BlinkMacSystemFont, Roboto" y="{{height + p_other + 10}}" dominant-baseline="hanging" text-anchor="middle" font-size="12" fill="#74838f" font-weight="bold" >{{(loop.index0/lines * max_x) + min_x | int | date(format="%H:%M:%S")}}</text>
+  {% if loop.last == false %}
+  {% if loop.first == false %}
+  <path stroke="#74838f"  stroke-width="2.0"  d="M {{offset_x }} {{height+p_other}} L {{offset_x}} {{height+p_other + 10}}" />
+  {% endif %}
+  <path stroke="#74838f" stroke-dasharray="10 6" stroke-width="0.5"  d="M {{p_left}} {{offset_y}} L {{width + p_left}} {{offset_y}}" />
+  {% endif %}
+  {% endfor %}
+  <path stroke="#74838f"   stroke-linejoin="round" stroke-width="2.0" d="M {{p_left}} {{height+p_other + 10}} L {{p_left}} {{height+p_other}} L {{width + p_left}} {{height+p_other}} L {{width + p_left}} {{height+p_other + 10}}"  fill="none" />
+  <path stroke="{{colour}}" stroke-linejoin="round" d="M {{p_left}} {{p_other}} {{path}}" stroke-width="2.0" fill="none" />
+  <text x="{{width/2 + p_left}}" y="{{p_other / 2}}" font-family="-apple-system, system-ui, BlinkMacSystemFont, Roboto" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#74838f" font-weight="700" >{{name}}</text>
+</svg>

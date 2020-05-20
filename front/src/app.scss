@@ -1,0 +1,25 @@
+
+@import 'style.scss';
+@import "~spectre.css/src/spectre";
+
+.header {
+   background-color: lighten($bg-color, 2%);
+   padding: 10px;
+   box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 0px;
+}
+
+.logo {
+    background: url('lorikeet.svg') no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    vertical-align: middle;
+    line-height: 50px;
+    padding-left: 60px;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+body {
+    background: $bg-color !important;
+}

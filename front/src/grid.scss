@@ -1,0 +1,73 @@
+@import 'style.scss';
+
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-grid-item.react-grid-placeholder {
+  opacity: 0.5;
+  transition-duration: 100ms;
+  z-index: 2;
+  user-select: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid $gray-color;
+  border-right: 3px solid $gray-color;
+  border-bottom-right-radius: 4px;
+  bottom: 3px;
+  right: 3px;
+  cursor: se-resize;
+}
+
+.grid-container{
+    padding: 10px;
+}
+
+
+.layout {
+
+    .react-grid-item {
+
+        border-radius: 4px;
+        background: lighten($bg-color, 2%);
+        box-shadow: rgba(0,0,0,0.2) 0px 1px 2px 0px;
+
+        .react-resizable-handle {
+            opacity: 0;
+            transition: opacity 200ms ease;
+        }
+
+        &:hover {
+           .react-resizable-handle {
+                opacity: 1;
+            }
+        }
+
+    }
+}
