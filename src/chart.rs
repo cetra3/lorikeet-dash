@@ -50,7 +50,7 @@ impl Chart {
 
     pub fn draw_svg(&self, width: usize, height: usize) -> Result<String, Error> {
 
-        if self.points.len() <= 1 {
+        if self.points.len() == 0 {
             return Ok(include_str!("loading.svg").into())
         }
 
