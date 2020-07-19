@@ -7,19 +7,19 @@
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
-    "@types/react-grid-layout": "^0.17.1",
+    "@types/react-grid-layout": "^0.17.2",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.4",
+    "http-proxy-middleware": "^1.0.5",
     "parcel": "^1.12.4",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.7"
   },
   "dependencies": {
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-grid-layout": "^0.18.3",
-    "spectre.css": "^0.5.8"
+    "spectre.css": "^0.5.9"
   }
 }
